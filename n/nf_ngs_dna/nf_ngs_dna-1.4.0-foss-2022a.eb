@@ -14,7 +14,7 @@ toolchain = {'name': 'foss', 'version': '2022a'}
 #
 source_urls = [('http://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
-checksums = ['9c5fb1bea66d311b01c6e4651c35523c40bcb2e93e30724a06e3b48b5dbe196e']
+checksums = ['1c61bfff1674c6e84900c23783d22b0a3dd56b71a878290c193c016c42f1da19']
 
 #
 # Dependencies.
