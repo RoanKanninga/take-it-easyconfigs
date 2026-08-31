@@ -23,9 +23,9 @@ dependencies = [
     ('zlib', '1.2.11'),
     ('bzip2', '1.0.8'),
     ('XZ', '5.2.5'),
-    ('OpenSSL', '1.1.1i'),
+#    ('OpenSSL', '1.1.1i'),
 ]
-
+osdependencies = [OS_PKG_OPENSSL_DEV]
 sanity_check_paths = {
     'files': ['include/archive.h', 'lib/libarchive.%s' % SHLIB_EXT],
     'dirs': ['bin', 'share/man/man3'],

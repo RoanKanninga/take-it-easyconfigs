@@ -34,9 +34,9 @@ dependencies = [
     ('Boost', '1.79.0'),    # needed by OQGraph
     ('Judy', '1.0.5'),      # needed by OQGraph
     ('PCRE2', '10.40'),
-    ('OpenSSL', '1.1.1q'),  # runtime dep for mysql and PCRE2 for mysqltest
+#    ('OpenSSL', '1.1.1q'),  # runtime dep for mysql and PCRE2 for mysqltest
 ]
-
+osdependencies = [OS_PKG_OPENSSL_DEV]
 separate_build_dir = True
 
 configopts = "-DCMAKE_BUILD_TYPE=Release "

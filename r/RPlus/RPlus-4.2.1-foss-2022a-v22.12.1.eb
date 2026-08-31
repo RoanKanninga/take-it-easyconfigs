@@ -58,8 +58,9 @@ dependencies = [
     ('GDAL', '3.5.0'),  # for sf
     ('MPFR', '4.1.0'),  # for Rmpfr
     ('libgit2', '1.4.3'),
-    ('OpenSSL', '1.1.1q')
+#    ('OpenSSL', '1.1.1q')
 ]
+osdependencies = [OS_PKG_OPENSSL_DEV]
 
 #
 # The '.' is a silly workaround to check for whatever current dir as workaround
