@@ -1,5 +1,5 @@
 name = 'ngs-utils'
-version = '24.03.1'
+version = '26.09.1'
 
 homepage = 'https://github.com/molgenis/ngs-utils'
 description = """Collection of notes and scripts related to NGS """
