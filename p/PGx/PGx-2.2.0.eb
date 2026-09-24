@@ -10,7 +10,7 @@ easyblock = 'PackedBinary'
 source_urls = [('http://github.com/molgenis/PGx-pipeline/archive/refs/tags/')]
 sources = [('%s.tar.gz' % (version))]
 
-checksums = ['feb18a28a6bad4abe7b13fb2ca660f4fc645d7a55915a4e7c7077f05fab731e8']
+checksums = ['66d94fbe4018edde6203fd015b0929c250b4bbb76b0194b3342644d1a0f24ec3']
 
 dependencies = [
 	('Molgenis-Compute', '20.03.1', '-Java-11-LTS'),

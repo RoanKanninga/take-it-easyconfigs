@@ -39,7 +39,7 @@ dependencies = [
 #
 install_cmd  = "mkdir -p %(installdir)s/libexec/bcftools/ && "
 install_cmd += "mkdir -p %(installdir)s/bin/ && "
-install_cmd += "cp -a %(builddir)s/bcftools-*/plugins/{idat2gtc,gtc2vcf,affy2vcf,BAFregress}.so %(installdir)s/libexec/bcftools/ && "
+install_cmd += "cp -a %(builddir)s/bcftools-*/plugins/{idat2gtc,gtc2vcf,affy2vcf,split,BAFregress}.so %(installdir)s/libexec/bcftools/ && "
 install_cmd += "cp -a %(builddir)s/gtc2vcf-*/gtc2vcf_plot.R %(installdir)s/bin/ && "
 install_cmd += "cp -a %(builddir)s/gtc2vcf-*/{LICENSE,README.md} %(installdir)s/"
 
@@ -48,6 +48,7 @@ sanity_check_paths = {
              + ['libexec/bcftools/idat2gtc.%s' % SHLIB_EXT]
              + ['libexec/bcftools/affy2vcf.%s' % SHLIB_EXT]
              + ['libexec/bcftools/gtc2vcf.%s' % SHLIB_EXT]
+             + ['libexec/bcftools/split.%s' % SHLIB_EXT]
              + ['libexec/bcftools/BAFregress.%s' % SHLIB_EXT],
     'dirs': ['bin', 'libexec/bcftools'],
 }

@@ -1,11 +1,11 @@
 name = 'PGx'
-version = '2.2.0-installer'
+version = '2.2.x-installer'
 
 homepage = 'https://github.com/molgenis/PGx-pipeline'
 description = """Pharmacogenetics pipeline"""
 
 toolchain = SYSTEM
-easyblock = 'bundle'
+easyblock = 'Bundle'
 
 dependencies = [
 	('Perl', '5.34.1', '-bare', ('GCCcore', '11.3.0')),

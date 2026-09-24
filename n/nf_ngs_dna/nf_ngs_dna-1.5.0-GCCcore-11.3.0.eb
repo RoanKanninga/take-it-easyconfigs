@@ -5,7 +5,7 @@ homepage = 'https://github.com/molgenis/nf_ngs_dna/'
 description = """Nexflow ngs_dna pipeline used in the UMCG."""
 
 toolchain = {'name': 'GCCcore', 'version': '11.3.0'}
-easyblock = 'CmdCp'
+easyblock = 'Tarball'
 
 source_urls = [('https://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
@@ -23,7 +23,7 @@ dependencies = [
 #
 sanity_check_paths = {
     'files': ['README.md', 'workflow_dragen.nf'],
-    'dirs': ['modules', 'scripts', 'tests']
+    'dirs': ['modules', 'scripts', 'test']
 }
 
 moduleclass = 'bio'
