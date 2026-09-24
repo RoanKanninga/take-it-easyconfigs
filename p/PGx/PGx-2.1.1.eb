@@ -13,10 +13,10 @@ sources = [('%s.tar.gz' % (version))]
 checksums = ['fef51f70a487b5cd650e433ea621b49b9a0b49a5744d5b9017d9be1e08b7378f']
 
 dependencies = [
-	('Perl', '5.34.1', '', ('GCCcore', '11.3.0')),
+	('Perl', '5.34.1', '-bare', ('GCCcore', '11.3.0')),
 	('Python', '3.10.4', '-bare', ('GCCcore', '11.3.0')),
-	('nextflow', '23.10.1', '-Java-25-LTS'),
-	('Molgenis-Compute', '20.03.1', '-Java-25-LTS')
+	('nextflow', '21.10.6', '-Java-11-LTS'),
+	('Molgenis-Compute', '20.03.1', '-Java-11-LTS')
 ]
 
 sanity_check_paths = {
