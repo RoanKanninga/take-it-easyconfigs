@@ -22,8 +22,9 @@ dependencies = [
     ('ncurses', '6.3'),  # for Term::ReadLine::Gnu
     ('libreadline', '8.1.2'),  # for Term::ReadLine::Gnu
     ('DB', '18.1.40'),  # for DB_File
-    ('OpenSSL', '1.1.1q'),  # required for Net::SSLeay
+#    ('OpenSSL', '1.1.1q'),  # required for Net::SSLeay
 ]
+osdependencies = [OS_PKG_OPENSSL_DEV]
 
 # !! order of extensions is important !!
 # extensions updated on Apr 28th 2022
