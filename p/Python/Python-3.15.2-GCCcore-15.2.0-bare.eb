@@ -1,0 +1,47 @@
+name = 'Python'
+version = '3.15.2'
+versionsuffix = '-bare'
+
+homepage = 'https://python.org/'
+description = """Python is a programming language that lets you work more quickly and integrate your systems
+ more effectively."""
+
+toolchain = {'name': 'GCCcore', 'version': '15.2.0'}
+toolchainopts = {
+    'pic': True,
+    'precise': True, # workaround for https://discuss.python.org/t/out-of-range-error-when-building-python-3-14-7-with-gcc-16-2-0/108539/11
+}
+
+source_urls = ['https://www.python.org/ftp/%(namelower)s/%(version)s/']
+sources = [SOURCE_TGZ]
+checksums = ['f74e1db0eabd651cd01e4e2a00201bd41866abe74869ab716f9bf33cbbaa0943']
+
+builddependencies = [
+    ('binutils', '2.45'),
+    ('pkgconf', '2.5.1'),
+]
+
+# some optional modules of the standard library require third-party libraries
+# https://docs.python.org/3/using/configure.html#requirements-for-optional-modules
+dependencies = [
+    ('bzip2', '1.0.8'),                   # python module: bz2
+    ('libffi', '3.5.2'),                  # python module: ctypes
+    ('XZ', '5.8.2'),                      # python module: lzma
+    ('mpdecimal', '4.0.1'),               # python module: decimal
+    ('libreadline', '8.3'),               # python module: readline
+    ('util-linux', '2.42.4', '-libuuid'), # python module: _uuid
+    ('ncurses', '6.6'),                   # python module: curses
+    ('OpenSSL', '3', '', SYSTEM),         # python module: ssl, hashlib
+    ('SQLite', '3.51.1'),                 # python module: sqlite3
+    ('Tcl', '9.0.3'),                     # python module: tkinter, IDLE, turtle
+    ('zlib', '2.3.2'),                    # python module: zlib, gzip, ensurepip
+    ('zstd', '1.5.7'),                    # python module: compression.zstd
+]
+
+exts_list = [
+    ('setuptools', '84.2.1', {
+        'checksums': ['3ff8b3b5492a0aa66960f4419365a86b84e013070d4313e4d4a6894f5d64d6bc'],
+    }),
+]
+
+moduleclass = 'lang'

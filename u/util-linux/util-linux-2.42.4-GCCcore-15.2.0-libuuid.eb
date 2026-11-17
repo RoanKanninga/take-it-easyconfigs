@@ -1,0 +1,45 @@
+easyblock = 'ConfigureMake'
+
+name = 'util-linux'
+version = '2.42.4'
+versionsuffix = '-libuuid'
+
+homepage = 'https://www.kernel.org/pub/linux/utils/util-linux'
+description = """ Minimal build of util-linux providing only libuuid, the UUID library. """
+
+toolchain = {'name': 'GCCcore', 'version': '15.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = [ 'https://www.kernel.org/pub/linux/utils/util-linux/v%(version_major_minor)s', ]
+sources = [SOURCELOWER_TAR_XZ]
+checksums = [ 'fbd62a100ab7bb8746ba0661255c3c48185b1e9021507c624da01fbc696330ec', ]
+
+builddependencies = [
+    ('binutils', '2.45'),
+]
+
+# disable all programs
+configopts = '--disable-all-programs '
+
+# explicitly enable libuuid
+configopts += '--enable-libuuid '
+
+# disable all other optional libraries
+configopts += '--disable-libblkid '
+configopts += '--disable-libmount '
+configopts += '--disable-libsmartcols '
+configopts += '--disable-libfdisk '
+configopts += '--disable-liblastlog2 '
+
+sanity_check_paths = {
+    'files': [
+        'lib/libuuid.so',
+        'include/uuid/uuid.h',
+    ],
+    'dirs': [
+        'lib',
+        'include/uuid',
+    ],
+}
+
+moduleclass = 'lib'
