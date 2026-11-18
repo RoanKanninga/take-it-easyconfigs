@@ -1,6 +1,5 @@
 name = 'Python'
 version = '3.15.2'
-versionsuffix = '-bare'
 
 homepage = 'https://python.org/'
 description = """Python is a programming language that lets you work more quickly and integrate your systems
@@ -23,6 +22,9 @@ builddependencies = [
 
 # some optional modules of the standard library require third-party libraries
 # https://docs.python.org/3/using/configure.html#requirements-for-optional-modules
+#
+# unsupported optional modules:
+# - tkinter, IDLE, turtle
 dependencies = [
     ('bzip2', '1.0.8'),                   # python module: bz2
     ('libffi', '3.5.2'),                  # python module: ctypes
@@ -33,7 +35,6 @@ dependencies = [
     ('ncurses', '6.6'),                   # python module: curses
     ('OpenSSL', '3', '', SYSTEM),         # python module: ssl, hashlib
     ('SQLite', '3.51.1'),                 # python module: sqlite3
-    ('Tcl', '9.0.3'),                     # python module: tkinter, IDLE, turtle
     ('zlib', '2.3.2'),                    # python module: zlib, gzip, ensurepip
     ('zstd', '1.5.7'),                    # python module: compression.zstd
 ]
