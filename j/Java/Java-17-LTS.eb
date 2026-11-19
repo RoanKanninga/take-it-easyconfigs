@@ -11,6 +11,6 @@ description = """Java Platform, Standard Edition (Java SE) lets you develop and 
 toolchain = SYSTEM
 
 # see https://github.com/easybuilders/easybuild-easyconfigs/blob/easybuild-easyconfigs-v5.4.2/easybuild/easyconfigs/j/Java/Java-17.0.21.eb
-dependencies = [('Java', '%(version)s.0.21')]
+dependencies = [('Java', '%(version)s.0.21.1')]
 
 moduleclass = 'lang'
