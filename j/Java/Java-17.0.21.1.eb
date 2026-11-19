@@ -1,8 +1,8 @@
 name = 'Java'
-_java_version = '25'
-_patch_version = '4'
-_build_version = '7'
-version = f'{_java_version}.0.{_patch_version}'
+_java_version = '17'
+_patch_version = '21'
+_build_version = '2'
+version = f'{_java_version}.0.{_patch_version}.1'
 
 homepage = 'https://openjdk.org'
 description = """Java Platform, Standard Edition (Java SE) lets you develop and deploy
@@ -19,13 +19,9 @@ sources = [_tarball_tmpl.format('%(jdkarch)s')]
 checksums = [
     {
         _tarball_tmpl.format('x64'):
-            'e58fcdcd637b25c03ca84cbbcefc70d11efb8f4b4cbd05decc9f661769d77f94',
-        _tarball_tmpl.format('aarch64'):
-            '621f7196f0b682fb557da58bec89bd7dfe5419811fe1c0ba75c9cc8432f084c7',
+            '0b0ac5eab6db6abaec68c9913bcddb31321e5da411c45073d520d9c125e6f7b4',
         _tarball_tmpl.format('ppc64le'):
-            '6b49f8289c377d4fb79ef54b612d77f969648f6ff862152f73c0be897e7c1ef8',
-        _tarball_tmpl.format('riscv64'):
-            'c6a70ed1ebe5ff66614f71fa9070e26d5b21587f576a8cb4f818269f4f475191',
+            '4d3d75690785cf593002446005427bb3c61de163f2469343572cdcb0d258ed62',
     }
 ]
 
