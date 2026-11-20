@@ -1,0 +1,53 @@
+easyblock = 'ConfigureMake'
+
+name = 'mpdecimal'
+version = '4.0.1'
+
+homepage = 'https://www.bytereef.org/mpdecimal/'
+description = """
+mpdecimal is a package for correctly-rounded arbitrary precision
+decimal floating point arithmetic, implementing the General Decimal
+Arithmetic Specification.
+"""
+
+toolchain = {'name': 'GCCcore', 'version': '15.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://www.bytereef.org/software/mpdecimal/releases/']
+sources = [SOURCELOWER_TAR_GZ]
+checksums = [
+    '96d33abb4bb0070c7be0fed4246cd38416188325f820468214471938545b1ac8',
+]
+
+builddependencies = [
+    ('binutils', '2.45'),
+    ('pkgconf', '2.5.1'),
+]
+
+# Build shared libraries and the C++ interface.
+configopts = '--enable-shared --enable-cxx'
+
+# Include both C and C++ libraries.
+sanity_check_paths = {
+    'files': [
+        'lib/libmpdec.a',
+        'lib/libmpdec.%s' % SHLIB_EXT,
+        'lib/libmpdec++.a',
+        'lib/libmpdec++.%s' % SHLIB_EXT,
+        'include/mpdecimal.h',
+        'include/decimal.hh',
+        'lib/pkgconfig/libmpdec.pc',
+        'lib/pkgconfig/libmpdec++.pc',
+    ],
+    'dirs': [
+        'share/doc/mpdecimal',
+    ],
+}
+
+sanity_check_commands = [
+    'pkg-config --libs libmpdec',
+    'pkg-config --libs libmpdec++',
+]
+
+moduleclass = 'math'
+

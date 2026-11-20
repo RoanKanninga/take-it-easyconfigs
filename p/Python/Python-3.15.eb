@@ -1,0 +1,14 @@
+easyblock = 'ModuleRC'
+
+name = 'Python'
+version = '3.15'
+
+homepage = 'https://python.org/'
+description = """Python is a programming language that lets you work more quickly and integrate your systems
+ more effectively."""
+
+toolchain = SYSTEM
+
+dependencies = [('Python', '%(version)s.2', '', ('GCCcore', '15.2.0'))]
+
+moduleclass = 'lang'
