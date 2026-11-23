@@ -11,7 +11,15 @@ toolchainopts = {'pic': True}
 
 source_urls = ['https://www.python.org/ftp/%(namelower)s/%(version)s/']
 sources = [SOURCE_TGZ]
+patches = ['Python-3.10.4_ssl-distrust-compromised-eMudhra-intermediate-CA-keys-CVE-2026-115557.patch']
+
 checksums = ['f3bcc65b1d5f1dc78675c746c98fcee823c038168fc629c5935b044d0911ad28']
+
+checksums = [
+    {'Python-3.10.4.tgz': 'f3bcc65b1d5f1dc78675c746c98fcee823c038168fc629c5935b044d0911ad28'},
+    {'Python-3.10.4_ssl-distrust-compromised-eMudhra-intermediate-CA-keys-CVE-2026-115557.patch':
+     '4ae40f0c1f0a1774e8ec8d667256a24928fc5114aa85b566b47ad31170b8c431'},
+]
 
 builddependencies = [
     ('UnZip', '6.0'),
