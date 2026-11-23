@@ -1,7 +1,7 @@
 name = 'Java'
 _java_version = '8'
-_patch_version = '512'
-_build_version = 'b09'
+_patch_version = '514'
+_build_version = 'b01'
 version = f'{_java_version}.{_patch_version}'
 
 homepage = 'http://openjdk.java.net'
@@ -20,7 +20,7 @@ sources = [_tarball_tmpl.format('%(jdkarch)s')]
 checksums = [
     {
         _tarball_tmpl.format('x64'):
-            'fb3bfa869012419b562bb4235d0d83ec4f8c1dda62ae432ba20c6c3a7e43f7e4',
+            '27eda854481d20806d918b30cdd417c6bed4fd15882e24f3595dc8ae7fb5d095',
     }
 ]
 
